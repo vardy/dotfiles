@@ -1,6 +1,6 @@
 # Dotfiles
 
-![](.meta/general.png "General Screenshot")
+![Screenshot](https://i.imgur.com/l2PXAP8.png "General Screenshot")
 
 ## Deployment
 
