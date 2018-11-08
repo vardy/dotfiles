@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --bg-scale '/home/pants/Pictures/Wallpapers/solarized_brush.png' 

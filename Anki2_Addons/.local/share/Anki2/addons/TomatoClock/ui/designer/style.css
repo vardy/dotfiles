@@ -1,0 +1,202 @@
+/*region OneClock*/
+#TomatoClockDlg {
+    font-family: 'Microsoft YaHei UI', Consolas, serif;
+}
+
+#frame {
+    /*border: 1px solid red;*/
+    border-radius: 10px;
+    background-color: #3A4055;
+}
+
+#label_remark {
+    font-size: 10pt;
+    color: white;
+    font-weight: bold;
+}
+
+#btn_clock {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.QPushButton:checked {
+    background-color: #f0545e;
+    border: None;
+}
+
+#btn_comp {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+}
+#btn_quick {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+#btn_start {
+    background-color: #f0545e;
+    border-radius: 16px;
+    font-size: 10pt;
+    color: white;
+}
+
+#btn_start:hover {
+    border: 1px solid white;
+}
+
+#btn_cancel {
+    background-color: #5550f0;
+    border-radius: 6px;
+    font-size: 8pt;
+    color: white;
+}
+
+#btn_cancel:hover {
+    border: 1px solid white;
+}
+
+#list_mis {
+    color: white;
+    background: #3A4055;
+    font-size: 15pt;
+    alignment: center;
+    border: none;
+}
+
+/*endregion*/
+
+/*region Progress Bar*/
+#clock_progress {
+    text-align: center;
+    border-radius: 3px;
+    background-color: #f0545e;
+    margin: 0;
+}
+
+#clock_progress::chunk {
+    background-color: #ffffff;
+    width: 20px;
+}
+
+#rest_progress {
+    /*border: 2px solid grey;*/
+    text-align: center;
+    border-radius: 3px;
+    /*width: 5px;*/
+}
+
+#rest_progress::chunk {
+    width: 20px;
+}
+
+#rest_progress QLabel {
+    border-image: url(":/icon/tomato.png");
+    font-family: 'Microsoft YaHei UI', serif;
+    color: white;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+#btn_ignore_rest {
+    background-color: #3A4055;
+    border-radius: 10px;
+    font-size: 10pt;
+    color: white;
+}
+
+#btn_ignore_rest:hover {
+    border: 1px solid white;
+    background-color: #f0545e;
+    font-weight: bold;
+}
+
+#btn_setting {
+    border-radius: 8px;
+}
+
+#btn_setting:hover {
+    border: 1px solid white;
+}
+
+#btn_donate {
+    border-radius: 8px;
+}
+
+#btn_wechat {
+    border-radius: 8px;
+}
+
+#btn_donate:hover {
+    border: 1px solid white;
+}
+
+#btn_wechat:hover {
+    border: 1px solid white;
+}
+
+#btn_more_addon {
+    border-radius: 8px;
+}
+
+#btn_more_addon:hover {
+    border: 1px solid white;
+}
+
+#btn_vote {
+     border-radius: 8px;
+}
+
+#btn_vote:hover {
+    border: 1px solid white;
+}
+
+#btn_updater {
+    border-radius: 10px;
+    background-color: #717da6;
+}
+
+#btn_updater:hover {
+    border: 1px solid white;
+}
+
+QPushButton::menu-indicator {
+    width: 0;
+}
+
+#more_addon_menu {
+    background-color: #f0545e; /* sets background of the menu */
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+}
+
+#more_addon_menu::item {
+    background-color: transparent;
+}
+
+#more_addon_menu::item:selected {
+    background-color: #f0313c;
+}
+
+#more_addon_menu > QMenu {
+    background-color: #f0545e;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+}
+
+#more_addon_menu > QMenu::item {
+    background-color: transparent;
+}
+
+#more_addon_menu > QMenu::item:selected {
+}
+
+/*endregion*/

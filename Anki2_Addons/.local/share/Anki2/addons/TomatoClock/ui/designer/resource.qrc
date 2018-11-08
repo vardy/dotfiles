@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>_anki365.jpg</file>
+    <file>miaobiao_off.png</file>
+    <file>miaobiao_on.png</file>
+    <file>vote.png</file>
+    <file>wechat.png</file>
+    <file>simple_off.png</file>
+    <file>simple_on.png</file>
+    <file>star_off.png</file>
+    <file>star_on.png</file>
+    <file>more.png</file>
+    <file>setting.png</file>
+    <file>alert.png</file>
+    <file>tomato.png</file>
+  </qresource>
+</RCC>
