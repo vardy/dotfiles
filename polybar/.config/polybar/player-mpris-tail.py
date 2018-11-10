@@ -33,10 +33,10 @@ class PlayerManager:
                 loop.run()
             except KeyboardInterrupt:
                 print("interrupt received, stopping…")
-    
+
     def connect(self):
         self._session_bus.add_signal_receiver(self.onOwnerChangedName, 'NameOwnerChanged')
-    
+
     def onOwnerChangedName(self, bus_name, old_owner, new_owner):
         if self.busNameIsAPlayer(bus_name):
             if new_owner and not old_owner:
@@ -57,7 +57,7 @@ class PlayerManager:
     def addPlayer(self, bus_name, owner = None):
         player = Player(self._session_bus, bus_name, owner = owner, connect = self._connect)
         self.players[player.owner] = player
-        
+
     def removePlayer(self, owner):
         self.players[owner].disconnect()
         del self.players[owner]
@@ -68,7 +68,7 @@ class PlayerManager:
         player = Player(self._session_bus, bus_name, owner = new_owner, connect = self._connect)
         self.players[new_owner] = player
         del self.players[old_owner]
-    
+
     # Get a list of player owners sorted by current status and age
     def getSortedPlayerOwnerList(self):
         players = [
@@ -134,7 +134,7 @@ class Player:
         if connect:
             self.printStatus()
             self.connect()
-    
+
     def play(self):
         self._playerPlay()
     def pause(self):
@@ -149,20 +149,20 @@ class Player:
         self._playerNext()
     def raisePlayer(self):
         self._playerRaise()
-        
+
     def connect(self):
         if self._disconnecting is not True:
             introspect_xml = self._introspect(self.bus_name, '/')
             if 'TrackMetadataChanged' in introspect_xml:
                 self._signals['track_metadata_changed'] = self._session_bus.add_signal_receiver(self.onMetadataChanged, 'TrackMetadataChanged', self.bus_name)
             self._signals['properties_changed'] = self._properties_interface.connect_to_signal('PropertiesChanged', self.onPropertiesChanged)
-    
+
     def disconnect(self):
         self._disconnecting = True
         for signal_name, signal_handler in list(self._signals.items()):
             signal_handler.remove()
             del self._signals[signal_name]
-    
+
     def refreshStatus(self):
         # Some clients (VLC) will momentarily create a new player before removing it again
         # so we can't be sure the interface still exists
@@ -180,7 +180,7 @@ class Player:
             self._parseMetadata()
         except dbus.exceptions.DBusException:
             self.disconnect()
-    
+
     def updateIcon(self):
         self.icon = (
             ICON_PLAYING if self.status == 'playing' else
@@ -222,12 +222,12 @@ class Player:
             else:
                 self.metadata['cover'] = ''
 
-            self.metadata['duration'] = _getDuration(self.metadata['length']) 
-    
+            self.metadata['duration'] = _getDuration(self.metadata['length'])
+
     def onMetadataChanged(self, track_id, metadata):
         self.refreshMetadata()
         self.printStatus()
-    
+
     def onPropertiesChanged(self, interface, properties, signature):
         updated = False
         if dbus.String('Metadata') in properties:
@@ -242,7 +242,7 @@ class Player:
                 self.status = status
                 self.updateIcon()
                 updated = True
-        
+
         if updated:
             self.printStatus()
 

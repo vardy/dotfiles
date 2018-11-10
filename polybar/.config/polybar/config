@@ -502,7 +502,7 @@ margin-bottom = 5
 
 [module/player-mpris-tail]
 type = custom/script
-exec = $HOME/.config/polybar/player-mpris-tail.py -f '{:artist:t18:{artist}:}{:artist: - :}{:t20:{title}:}  %{A1:~/.config/polybar/player-mpris-tail.py previous:}<%{A} %{A1:~/.config/polybar/player-mpris-tail.py play-pause:} {icon-reversed} %{A} %{A1:~/.config/polybar/player-mpris-tail.py next:}>%{A}' --icon-none=~ --icon-playing=♫ --icon-paused=▮▮
+exec = $HOME/.config/polybar/player-mpris-tail.py -f '{:artist:t18:{artist}:}{:artist: - :}{:t50:{title}:}  %{A1:~/.config/polybar/player-mpris-tail.py previous:}<%{A} %{A1:~/.config/polybar/player-mpris-tail.py play-pause:} {icon-reversed} %{A} %{A1:~/.config/polybar/player-mpris-tail.py next:}>%{A}' --icon-none=~ --icon-playing=♫ --icon-paused=▮▮
 tail = true
 label = %output%
 
