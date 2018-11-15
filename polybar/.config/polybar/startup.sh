@@ -9,7 +9,6 @@ if type "xrandr"; then
     pkill xembedsniproxy
 
     MONITOR=$m polybar --reload main &
-    #MONITOR=$m polybar --reload invis_top &
     MONITOR=$m polybar --reload invis_bottom &
   done
 else
@@ -18,7 +17,6 @@ else
   pkill xembedsniproxy
 
   polybar --reload main &
-  #polybar --reload invis_top &
   polybar --reload invis_bottom &
 fi
 

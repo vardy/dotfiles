@@ -1,4 +1,5 @@
 #!/bin/bash
+
 xrdb ~/.Xresources
 
 # Force KDE environment when running i3

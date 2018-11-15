@@ -49,6 +49,7 @@ font-2 = siji:pixelsize=10;1
 font-3 = MaterialIcons:size=15:antialias=false;6
 
 modules-left = i3 xwindow
+;modules-left = i3 luftwm xwindow
 modules-center = player-mpris-tail
 modules-right = filesystem home media_part temperature pulseaudio date
 
@@ -108,6 +109,7 @@ font-2 = siji:pixelsize=10;1
 font-3 = MaterialIcons:size=15:antialias=false;6
 
 modules-left = i3_invis xwindow
+;modules-left = i3_invis luftwm xwindow
 modules-center = player-mpris-tail
 modules-right = 
 
@@ -187,6 +189,12 @@ label-empty-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
+
+[module/luftwm]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = false
 
 [module/i3]
 type = internal/i3
@@ -502,7 +510,7 @@ margin-bottom = 5
 
 [module/player-mpris-tail]
 type = custom/script
-exec = $HOME/.config/polybar/player-mpris-tail.py -f '{:artist:t18:{artist}:}{:artist: - :}{:t50:{title}:}  %{A1:~/.config/polybar/player-mpris-tail.py previous:}<%{A} %{A1:~/.config/polybar/player-mpris-tail.py play-pause:} {icon-reversed} %{A} %{A1:~/.config/polybar/player-mpris-tail.py next:}>%{A}' --icon-none=~ --icon-playing=♫ --icon-paused=▮▮
+exec = $HOME/.config/polybar/player-mpris-tail.py -f '{:artist:t50:{artist}:}{:artist: - :}{:t50:{title}:}  %{A1:~/.config/polybar/player-mpris-tail.py previous:}<%{A} %{A1:~/.config/polybar/player-mpris-tail.py play-pause:} {icon-reversed} %{A} %{A1:~/.config/polybar/player-mpris-tail.py next:}>%{A}' --icon-none=~ --icon-playing=♫ --icon-paused=▮▮
 tail = true
 label = %output%
 
