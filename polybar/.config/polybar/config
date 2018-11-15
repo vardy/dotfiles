@@ -49,7 +49,6 @@ font-2 = siji:pixelsize=10;1
 font-3 = MaterialIcons:size=15:antialias=false;6
 
 modules-left = i3 xwindow
-;modules-left = i3 luftwm xwindow
 modules-center = player-mpris-tail
 modules-right = filesystem home media_part temperature pulseaudio date
 
@@ -109,7 +108,6 @@ font-2 = siji:pixelsize=10;1
 font-3 = MaterialIcons:size=15:antialias=false;6
 
 modules-left = i3_invis xwindow
-;modules-left = i3_invis luftwm xwindow
 modules-center = player-mpris-tail
 modules-right = 
 
@@ -189,12 +187,6 @@ label-empty-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
-
-[module/luftwm]
-type = internal/xworkspaces
-pin-workspaces = false
-enable-click = true
-enable-scroll = false
 
 [module/i3]
 type = internal/i3
